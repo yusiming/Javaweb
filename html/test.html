@@ -1,6 +1,105 @@
 <html>
-	<head></head>
+	<head>
+		<title>基本标签的复习</title>
+	</head>
 	<body>
-		<image src="../\images\verycode.gif">
+		<a name="top">顶部</a><br/>
+		<font size="3" color="red">复习文字标签</font><!--size取值1到7-->
+		<h1>标题标签1</h1><!--标题标签自动换行大小逐渐减小-->
+		<hr size="3" color="green"/><!--水平线标签-->
+		<h2>标题标签2</h2>
+		&lt;ht&nbsp;ml&gt;&amp;<br/><!--显示特殊字符-->
+		<dl>						<!--列表标签-->
+			<dt>河南理工</dt>
+			<dd>老师</dd>
+			<dd>学生</dd>
+			<dd>领导</dd>
+		</dl>
+		<ol type="i">  				<!--type可取1，a，i-->
+			<li>老师</li>
+			<li>学生</li>
+			<li>领导</li>
+		</ol>
+		<ul type="square">  		<!--type可取cicle，disc，square-->
+			<li>老师</li>
+			<li>学生</li>
+			<li>领导</li>
+		</ul>
+		<br/>
+		<a href="Ex1.html" target="_blank"><img src="..\/images/68684734_p0.jpg" width="800" height="500"/><br/></a>
+		<a href="#" target="_self">这是一个文字超链接</a> 		<!--target可取_blank，_self，href取#表示不连接到任何资源-->
+		<br/>
+		<pre>						<!--原样输出标签-->	
+			public static void main(String[] args){
+				System.out.println("Hello")
+			}
+		</pre><br/>
+		<table border="1" bordercolor="red" cellspacing="0" width="200" height="200">
+			<caption>数字表格1</caption>
+			<tr align="center">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr align="center">
+				<td align="center">4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+			</tr>
+			</table>
+		<table border="1" bordercolor="red" cellspacing="0" width="200" height="200">
+			<caption>数字表格2</caption>
+			<tr align="center">
+				<td colspan="3">1</td>
+			</tr>
+			<tr align="center">
+				<td align="center">4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+			</tr>
+		</table>
+		<table border="1" bordercolor="red" cellspacing="0" width="200" height="200">
+			<caption>数字表格</caption>
+			<tr align="center">
+				<td>1</td>
+				<td>2</td>
+				<td rowspan="3">3</td>
+			</tr>
+			<tr align="center">
+				<td align="center">4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<th>8</th>
+			</tr>
+		</table>
+
+			<a href="#top">回到顶部</a>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

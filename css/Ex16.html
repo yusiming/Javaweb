@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>基本选择器的优先级</title>
+		<!--style > id > class > 标签选择器-->
+		<style type="text/css">
+			div{
+				background-color:red;
+			}
+			.div1{
+				background-color:black;
+			}
+			#div2{
+				background-color:orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background-color:gray;" class="div1" id="div2">天道酬勤</div>
+	</body>
+</html>
