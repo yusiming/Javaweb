@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>盒子模型的定位</title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				border: 2px solid blue;
+			}
+			div#d11 {
+				position:absolute;  		<!--从对象从文档流中拖出-->
+				top: 200px;
+				left:300px;
+			}
+			div#d12 {
+				position:relative;			<!--不将从对象从文档流中拖出-->
+				top:300;
+				left:300;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d11">AAAAAAAAAAAA</div>
+		<div id="d12">BBBBBBBBBBBB</div>
+		<div id="d13">CCCCCCCCCCCC</div>
+	</body>
+</html>
