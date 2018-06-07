@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>js中的函数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//无参数
+			function test() {
+				document.write("test" + "<br/>");
+			}
+			test();
+			//有参数，无return值
+			function add(a,b) {
+				var sum = a + b;
+				document.write(sum + "<br/>");
+			}
+			add(2,3);
+			//有return值
+			function add1(a,b,c) {
+				var sum = a + b +c
+				return sum;
+			}
+			document.write(add1(1,1,1) + "<br/>");
+			//使用匿名函数
+			var add2 = function (m,n) {
+				document.write(m+n + "<br/>")
+			}
+			add2(5,5);
+			//第三种方式
+			var canshu = "m,n";
+			var fangfati = "var sum = m + n; return sum "
+			var add3 = Function(canshu,fangfati);
+			document.write(add3(2,2));
+		</script>
+	</body>
+</html>

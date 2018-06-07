@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>js中的数组</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//定义数组的第一种方式
+			var arr1 = [1,2,3];
+			var arr2 = [1,"2",true];
+			document.write(arr1);
+			document.write("<br/>");
+			document.write(arr2);
+			//第二种方式
+			var arr3 = Array(3);
+			arr3[0] = "a";
+			arr3[1] = "b";
+			arr3[2] = "c";
+			document.write("<br/>");
+			document.write(arr3);
+			//第三种方式
+			var arr4 = Array(6,7,8);
+			document.write("<br/>");
+			document.write(arr4);
+			document.write("<br/>");
+			document.write("arr4的长度：" + arr4.length);
+		</script>
+	</body>
+</html>
