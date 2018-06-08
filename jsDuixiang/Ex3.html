@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>String对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr1 = [1,2,3];
+			var arr2 = ["a","b","c"];
+			//length属性
+			document.write(arr1.length);
+			document.write("<br/>");
+			//concat方法连接两个或者多个字符串
+			document.write(arr1.concat(arr2));
+			document.write("<br/>");
+			//join方法根据制定的字符串分割数组
+			document.write(arr1.join("-"));
+			document.write("<br/>");
+			//push方法向数组末尾添加元素，并返回数组的长度
+			document.write(arr1.push(4));
+			document.write("<br/>");
+			var arr3 = ["d","e"];
+			//如果添加的是一个数组，把数组当作一个元素添加进去
+			document.write(arr2.push(arr3));
+			document.write("<br/>");
+			document.write(arr2);
+			document.write("<br/>");
+			document.write(arr2.length);
+			document.write("<br/>");
+			//pop方法删除并返回最后一个元素
+			document.write(arr3.pop());
+			document.write("<br/>");
+			//reverse方法颠倒数组顺序
+			document.write(arr1.reverse());
+		</script>
+	</body>
+</html>
