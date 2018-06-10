@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>页面b</title>
+	</head>
+	<body>
+		<h1>BBB</h1>
+		<a href="c.html">BBB</a>
+		<hr/>
+		<input type="button" value="back" onclick="back1();"/>
+		<hr/>
+		<input type="button" value="next" onclick="next1();">
+		<script type="text/javascript">			
+			function back1() {
+				//history.back();
+				history.go(-1);
+			}
+			function next1() {
+				//history.forward();
+				history.go(1);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>window对象</title>
+	</head>
+	<body>
+		<input type="button" value="clear1" onclick="clear1();"/>
+		<input type="button" value="clear2" onclick="clear2();"/>
+		<script type="text/javascript">
+			//setInterval方法可以设置一个定时器，每隔3秒执行一次js代码
+			var id1 = window.setInterval("alert(111);",3000);
+			//setTimeout方法也可以设置一个定时器，不过js代码只执行一次
+			var id2 = window.setTimeout("alert(222)",3000);
+			//clearInterval方法可以清除setInterval方法设置的定时器
+			function clear1() {
+				window.clearInterval(id1);
+			}
+			//clearTimeout方法可以清除setTimeout方法设置的定时器
+			function clear2() {
+				window.clearTimeout(id2);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>函数重载</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function add(a,b) {
+				return a + b;
+			}
+			function add(a,b,c) {
+				return a + b + c;
+			}
+			//这个方法会被执行,上面的执行不了
+			function add(a,b,c,d) {
+				return a + b + c + d;
+			}
+			document.write(add(1,2));			//NaN
+			document.write("<hr/>");			
+			document.write(add(1,2,3));			//NaN
+			document.write("<hr/>");			
+			document.write(add(1,2,3,4));		//10
+			document.write("<hr/>");
+			//使用arguments数组模拟函数重载
+			function newadd() {
+				var sum = 0;
+				for(var i = 0;i < arguments.length;i++) {
+					sum = sum + arguments[i];
+				}
+				return sum;
+			}
+			document.write(newadd(1,2));
+			document.write("<hr/>");
+			document.write(newadd(1,2,3));
+			document.write("<hr/>");
+			document.write(newadd(1,2,3,4));
+		</script>
+	</body>
+</html>

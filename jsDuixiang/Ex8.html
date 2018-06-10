@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>bom对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//点击按钮实现页面跳转
+			document.write("<input type='button' value='跳转' onclick='tiaozhuan();'/>");
+			document.write("<hr/>");
+			//navigator对象获取客户机的信息，appName属性可以获取浏览器名称
+			document.write(navigator.appName);
+			document.write("<hr/>");
+			//screen对象可以获取屏幕信息
+			document.write(screen.width);
+			document.write("<hr/>");
+			document.write(screen.height);
+			document.write("<hr/>");
+			//location对象可以获取或者设置url地址
+			document.write(location.href);
+			document.write("<hr/>");
+			//点击按钮与此方法绑定
+			function tiaozhuan() {
+				location.href = "hello.html";
+			}
+		</script>
+	</body>
+</html>

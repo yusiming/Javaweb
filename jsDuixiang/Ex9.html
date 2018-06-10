@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>window对象</title>
+	</head>
+	<body>
+		<input type="button" value="关闭窗口" onclick="close1();"/>
+		<br/>
+		<script type="text/javascript">
+			window.alert("aaa");
+			//confirm方法弹出确认提示框，并返回一个boolean值
+			var flag = window.confirm("是否删除");
+			if(flag == true) {
+				alert("删除成功");
+			}
+			else {
+				alert("删除失败");
+			}
+			//prompt方法弹出输入对话框,方法将返回你输入的内容，如果没有输入内容，则返回null默认值，或者null
+			var str1 = window.prompt("请输入：","0");
+			document.write(str1);
+			//open方法可以打开一个新的url页面
+			window.open("hello.html","","width=200,height=300");
+			//close方法关闭窗口
+			function close1() {
+				window.close();
+			}
+		</script>
+	</body>
+</html>

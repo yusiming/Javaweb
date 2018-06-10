@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>全局函数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//如果一个字符串是js代码，eval方法可以直接执行这个代码
+			var str = "alert('aaa');";
+			alert(str);
+			eval(str);
+			//encodeURI对字符串编码，decodeURI对字符串解码
+			var encode1 = encodeURI("中文aaaa");
+			document.write(encode1);
+			document.write("<hr/>");
+			document.write(decodeURI(encode1));
+			//isNaN判断当前字符串是不是数字,如果是返回值是false否则true
+			var str1 = "212";
+			document.write("<hr/>");
+			document.write(isNaN(str1));
+			document.write("<hr/>");
+			//parseInt类型转换
+			var str2 = "111";
+			document.write(parseInt(str2) + 1);
+		</script>
+	</body>
+</html>
