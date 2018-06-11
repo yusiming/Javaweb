@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>document对象</title>
+	</head>
+	<body>
+		<input type="text" name="name1" value="123456789"/>
+		<script type="text/javascript">
+			//当相同name属性的标签只有一个时，可以通过使用数组下标的方式得到单个对象
+			var input1 = document.getElementsByName("name1")[0];
+			alert(input1.value);
+			//当相同的标签只有一个时，可以通过使用数组下标的方式得到单个对象
+			var input2 = document.getElementsByTagName("input")[0];
+			alert(input2.value);
+		</script>
+	</body>
+</html>

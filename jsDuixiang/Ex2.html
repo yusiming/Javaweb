@@ -6,14 +6,15 @@
 		<script type="text/javascript">
 			var str1 = "abc";
 			var str2 = "def";
-			//concat方法连接字符串
-			document.write(str1.concat(str2));
+			var newstr = str1.concat(str2);
+			//concat方法连接字符串,得到一个新字符串
+			document.write(newstr);
 			document.write("<br/>");
 			//charAt方法返回指定位置的字符
-			document.write(str1.charAt(0));
+			document.write(str1.charAt(1));
 			document.write("<br/>");
 			//indexOf方法返回字符串的位置
-			document.write(str1.indexOf("ab"));
+			document.write(str1.indexOf("bc"));
 			document.write("<br/>");
 			//split方法把字符串分割为字符串数组
 			var str3 = "a-b-c";
@@ -25,10 +26,10 @@
 			document.write("<br/>");
 			//substr(a,b)方法从a位置开始截取b个字符
 			var str4 = "abcdefg";
-			document.write(str4.substr(0,3));
+			document.write(str4.substr(1,3));
 			document.write("<br/>");
 			//substring(a,b)从第a个位置开始，截取到第b个位置，不包括b位置上的字符
-			document.write(str4.substring(0,3));
+			document.write(str4.substring(1,3));
 		</script>
 	</body>
 </html>

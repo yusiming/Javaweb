@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul id="ulid">
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+		</ul>
+		<input type="button" value="添加" onclick="add1();"/>
+		<script type="text/javascript">
+			function add1() {
+			//获取ul标签
+			var ul1 = document.getElementById("ulid");
+			//创建li标签
+			var li1 = document.createElement("li");
+			//创建文本
+			var text1 = document.createTextNode("44");
+			//把文本添加到li下面
+			li1.appendChild(text1);
+			//把li添加到ul末尾
+			ul1.appendChild(li1);
+			}
+		</script>
+	</body>
+</html>

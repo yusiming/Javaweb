@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>document对象</title>
+	</head>
+	<body>
+		<input type="text" name="name1" value="aaa"/><br/>
+		<input type="text" name="name1" value="bbb"/><br/>
+		<input type="text" name="name1" value="ccc"/><br/>
+		<script type="text/javascript">
+			//getElementsByName方法可以通过name属性值获取对象数组
+			var arr1 = document.getElementsByName("name1");
+			for(var i = 0;i < arr1.length;i++) {
+				alert(arr1[i].value);
+			}
+			//getElementsByTagName方法通过标签名称获取对象数组
+			var arr2 = document.getElementsByTagName("input");
+			for(var i = 0;i < arr2.length;i++) {
+				alert(arr2[i].value);
+			}
+		</script>
+	</body>
+</html>

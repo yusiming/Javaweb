@@ -7,13 +7,13 @@
 			var date = new Date();
 			//获取当前时间
 			document.write(date);
-			//格式化
+			//toLocaleString方法格式化为本地常用时间
 			document.write("<hr/>");
 			document.write(date.toLocaleString());
-			//获取当前年份
+			//getFullYear方法获取当前年份
 			document.write("<hr/>");
 			document.write("当前年份：" + 	date.getFullYear());
-			//获取当前月份,范围0-11
+			//getMonth方法获取当前月份,范围0-11
 			document.write("<hr/>");
 			document.write("当前月份：" + (date.getMonth() + 1));
 			//获取当前星期信息范围0-6，0表示星期日

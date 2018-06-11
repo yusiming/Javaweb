@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table border="1" bordercolor="red "cellspacing="0" width=250 height=250>
+			<tr align="center">
+				<th>操作</th>
+				<th>编号</th>
+				<th>姓名</th>
+			</tr>
+			<tr align="center">
+				<td><input type="button" value="选择" onclick="f1('001','张三');"/></td>
+				<td>001</td>
+				<td>张三</td>
+			</tr>
+			<tr align="center">
+				<td><input type="button" value="选择" onclick="f1('002','李四');"/></td>
+				<td>002</td>
+				<td>赵四</td>
+			</tr>
+			<tr align="center">
+				<td><input type="button" value="选择" onclick="f1('003','王五');"/></td>
+				<td>003</td>
+				<td>王五</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			function f1(bianhao,name) {
+				//window.opner属性可以获取到创建当前窗口的窗口的引用
+				//可以利用此属性实现跨窗口操作数据
+				var window1 = window.opener;
+				window1.document.getElementById("text1").value = bianhao;
+				window1.document.getElementById("text2").value = name;
+			}
+		</script>
+	</body>
+</html>

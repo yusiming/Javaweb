@@ -9,10 +9,11 @@
 			//length属性
 			document.write(arr1.length);
 			document.write("<br/>");
-			//concat方法连接两个或者多个字符串
-			document.write(arr1.concat(arr2));
+			//concat方法连接两个或者多个字符串，得到一个新的数组
+			var newarr = arr1.concat(arr2);
+			document.write(newarr);
 			document.write("<br/>");
-			//join方法根据制定的字符串分割数组
+			//join方法根据制定的字符串分割数组,原数组并不会改变
 			document.write(arr1.join("-"));
 			document.write("<br/>");
 			//push方法向数组末尾添加元素，并返回数组的长度

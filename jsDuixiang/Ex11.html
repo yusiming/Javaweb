@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>document对象</title>
+	</head>
+	<body>
+		<input type="text" id="text1" name="aaa"/> <!--value属性可以设置默认值-->
+		<br/>
+		<script type="text/javascript">
+			//getElementById方法可以通过id获得该标签封装的对象,input1是一个对象
+			var input1 = document.getElementById("text1");
+			alert(input1);
+			//可以得到input1对象的name值
+			document.write(input1.name);
+			//设置input1标签的value值
+			input1.value = "bbb"
+		</script>
+	</body>
+</html>
