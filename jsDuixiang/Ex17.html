@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Node对象的属性</title>
+	</head>
+	<body>
+		<ul id="ulid1">
+			<li id="li1">111</li>
+			<li id="li2">222</li>
+			<li id="li3">333</li>
+			<li id="li4">444</li>
+		</ul>
+		<script type="text/javascript">
+			var li1element = document.getElementById("li1");
+			document.write(li1element.id);
+			document.write("<br/>");
+			//parentNode属性可以得到改元素节点的父节点
+			document.write("li1的父节的id属性值：" + li1element.parentNode.id);
+			//firstChild属性可以获取该节点的第一个字节点。lastChild属性可以获取最后一个字节点，这两个属性兼容性差兼容性差
+			//可以使用children属性代替，该属性只返回元素字节点，不返回文本节点
+			var ulelement = document.getElementById("ulid1");
+			var arr1 = ulelement.children;
+			document.write("<br/>");
+			document.write("ul 标签的子元素节点个数：" + arr1.length);
+			document.write("<br/>");
+			document.write("ul标签的第一个子元素节点的id属性：" + arr1[0].id);
+			document.write("<br/>");
+			document.write("ul标签的最后一个子元素节点的id属性：" + arr1[3].id);
+			document.write("<br/>");
+			//nextSibling和previousSibling属性兼容性也很差,谷歌浏览器会把空白处当成文本节点
+			//最好使用children属性来得到字节点的数组，这个数组不包括文本节点
+			document.write("第一个节点的下一个同辈节点的id属性：" + arr1[0].nextSibling.id);
+		</script>
+	</body>
+</html>

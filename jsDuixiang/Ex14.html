@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>element对象</title>
+	</head>
+	<body>
+		<input type="text" id="text1" class = "text2"value="aaa"/>
+		<script type="text/javascript">
+			var textelement = document.getElementById("text1");
+			alert(textelement.value);
+			//通过对象.属性名不能显示class值,getAttribute方法可以
+			alert(textelement.class);
+			alert(textelement.getAttribute("class"));
+			alert(textelement.getAttribute("value"));
+			//setAttribute方法设置属性值
+			textelement.setAttribute("class","text3");
+			alert(textelement.getAttribute("class"));
+			//removeAttribute方法删除属性
+			textelement.removeAttribute("class");
+			alert(textelement.getAttribute("class"));
+		</script>
+	</body>
+</html>

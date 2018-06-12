@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Node对象的属性</title>
+	</head>
+	<body>
+		<div id="div1">啊啊啊啊</div>
+		<script type="text/javascript">
+			//得到标签对象
+			var divelement = document.getElementById("div1");
+			//标签对象的nodeType,noodName，nodeValue属性
+			document.write("标签的nodeType属性:" + divelement.nodeType);
+			document.write("<br/>");
+			document.write("标签的nodeName属性:" + divelement.nodeName);
+			document.write("<br/>");
+			document.write("标签的nodeValue属性:" + divelement.nodeValue);
+			document.write("<br/>");
+			//使用getAttributeNode方法得到属性对象
+			var idelement = divelement.getAttributeNode("id");
+			document.write("属性的nodeType属性:" + idelement.nodeType);
+			document.write("<br/>");
+			document.write("属性的nodeName属性:" + idelement.nodeName);
+			document.write("<br/>");
+			document.write("属性的nodeValue属性:" + idelement.nodeValue);
+			document.write("<br/>");
+			//使用divelement的firstChild或者latChild属性得到文本对象
+			var textelement = divelement.firstChild;
+			document.write("文本的nodeType属性:" + textelement.nodeType);
+			document.write("<br/>");
+			document.write("文本的nodeName属性:" + textelement.nodeName);
+			document.write("<br/>");
+			document.write("文本的nodeValue属性:" + textelement.nodeValue);
+		</script>
+	</body>
+</html>

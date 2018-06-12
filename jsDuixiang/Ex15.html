@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>element对象</title>
+	</head>
+	<body>
+		<ul id="ulid1">
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+		</ul>
+		<script type="text/javascript">
+			var ulelement = document.getElementById("ulid1");
+			//childNodes属性兼容性很差，有的浏览器能正确解析有的不能
+			var arr1 = ulelement.childNodes;
+			alert(arr1.length);
+			//getElemenstByTagName方法是获取节点下子节点的唯一有效方法
+			var arr2 = ulelement.getElementsByTagName("li");
+			alert(arr2.length);
+		</script>
+	</body>
+</html>
