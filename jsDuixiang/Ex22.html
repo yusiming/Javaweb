@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>操作dom树五</title>
+	</head>
+	<body>
+		<ul id="ulid1">
+			<li id="li1">111</li>
+			<li id="li2">222</li>
+			<li id="li3">333</li>
+			<li id="li4">444</li>
+		</ul>
+		<div id="div1"></div>
+		<input type="button" value="克隆" onclick="clone1();"/>
+		<script type="text/javascript">
+			//将ul标签复制到div标签中
+			function clone1() {
+				//首先得到ul标签
+				var ulelement1 = document.getElementById("ulid1");
+				//得到div标签对象
+				var divelement = document.getElementById("div1");
+				//复制节点，使用cloneNode(boolean)方法
+				divelement.appendChild(ulelement1.cloneNode(true))//true参数代表复制ul的子节点
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>操作dom树二</title>
+	</head>
+	<body>
+		<ul id="ulid1">
+			<li id="li1">111</li>
+			<li id="li2">222</li>
+			<li id="li4">444</li>
+		</ul>
+		<input type="button" value="添加" onclick="add1();"/>
+		<script type="text/javascript">
+			function add1() {
+			//创建li标签
+			var lielement3 = document.createElement("li");
+			//创建文本对象
+			var text1 = document.createTextNode("333");
+			//获取ul标签
+			var ulelement = document.getElementById("ulid1");
+			//li4标签
+			var lielement4 = document.getElementById("li4");
+			//将文本添加到li3下面
+			lielement3.appendChild(text1);
+			//使用insertBefore方法将li3添加到li4之前
+			ulelement.insertBefore(lielement3,lielement4);			
+			}
+		</script>
+	</body>
+</html>

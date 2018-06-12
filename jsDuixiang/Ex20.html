@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>操作dom树三</title>
+	</head>
+	<body>
+		<ul id="ulid1">
+			<li id="li1">111</li>
+			<li id="li2">222</li>
+			<li id="li2">333</li>
+			<li id="li4">444</li>
+		</ul>
+		<input type="button" value="删除" onclick="remove1();"/>
+		<script type="text/javascript">
+			function remove1() {
+				//目的删除li4,先获取ul标签节点
+				var ulelement = document.getElementById("ulid1");
+				//获取li4节点,痛过removeChild方法删除字li4节点
+				var lielement4 = document.getElementById("li4");
+				ulelement.removeChild(lielement4);
+			}
+		</script>
+	</body>
+</html>

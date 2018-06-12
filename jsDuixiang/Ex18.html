@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>操作dom树一</title>
+		<style type="text/css">
+			div#div1 {
+				width:200px;
+				height:300px;
+				border:2px solid red;
+			}
+			div#div2 {
+				width:200px;
+				height:300px;
+				border:2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="点击" onclick="add();"/>
+		<div id="div1">
+			<ul id="ulid1">
+				<li>111</li>
+				<li>222</li>
+				<li>333</li>
+			</ul>
+		</div>
+		<div id="div2"></div>
+		<script type="text/javascript">
+			function add() {
+				var ulelement = document.getElementById("ulid1");
+				var divelement = document.getElementById("div2");
+				divelement.appendChild(ulelement);
+			}
+		</script>
+	</body>
+</html>

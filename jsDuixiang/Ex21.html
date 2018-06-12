@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>操作dom树四</title>
+	</head>
+	<body>
+		<ul id="ulid1">
+			<li id="li1">111</li>
+			<li id="li2">222</li>
+			<li id="li3">333</li>
+			<li id="li5">555</li>
+		</ul>
+		<input type="button" value="替换" onclick="replace1();"/>
+		<script type="text/javascript">
+			function replace1() {
+				//使用li4标签替换li5，先创建新标签
+				var lielement4 = document.createElement("li");
+				var text1 = document.createTextNode("444");
+				//将文本节点添加到li4
+				lielement4.appendChild(text1);
+				//获取li5节点
+				var lielement5 = document.getElementById("li5");
+				//获取ul节点
+				var ulelement1 = document.getElementById("ulid1");
+				//替换节点
+				ulelement1.replaceChild(lielement4,lielement5);
+			}
+		</script>
+	</body>
+</html>

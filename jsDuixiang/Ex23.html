@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>innerHTML属性</title>
+		<style type="text/css">
+			div#div2 {
+				width:200px;
+				height:300px;
+				border:2px solid red;
+			}
+		</style>
+	</head>
+	<body>	
+		<div id="div1">1111</div>
+		<div id="div2"></div>
+		<script type="text/javascript">
+			var divelement1 = document.getElementById("div1");
+			//使用innerHTML属性可以得到标签里的内容
+			alert(divelement1.innerHTML);
+			//使用innerHTML属性也可以设置标签里的内容，可以是文字和html代码
+			var str = "<table border=1 bordercolor='black'><tr><td>111</td></tr><tr><td>222</td></tr><tr><td>333</td></tr></table>";
+			var divelement2 = document.getElementById("div2");
+			//设置div标签里的内容
+			divelement2.innerHTML = str;
+		</script>
+	</body>
+</html>
