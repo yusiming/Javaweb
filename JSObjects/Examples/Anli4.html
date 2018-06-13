@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>下拉列表左右选择实现</title>
+		<style type="text/css"> 
+			select {
+				width:100px;
+				height:200px;
+			}
+			div#div2 {
+				position: absolute;
+				top: 7px;
+				left: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<!--multiple属性可以使下拉列表全部显示出来-->
+			<select multiple id="select1">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<br/>
+			<input type="button" value="选中添加到右边" onclick="addSlelectedToRight();"/>
+			<br/>
+			<input type="button" value="全部添加到右边" onclick="addAllToRight();"/>
+		</div>
+		<div id="div2">
+			<select multiple id="select2">
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+			<br/>
+			<input type="button" value="选中添加到左边" onclick="addSlelectedToLeft();"/>
+			<br/>
+			<input type="button" value="全部添加到左边" onclick="addAllToLeft();"/>	
+		</div>
+		<script type="text/javascript">
+			//获取左边的select和option对象
+			var selectElement1 = document.getElementById("select1");
+			//这里可以使用children属性或者getElementsByTagName方法
+			var arr1 = selectElement1.children
+			//获取右边的select和option对象
+			var selectElement2 = document.getElementById("select2");
+			var arr2 = selectElement2.children;
+			//选中添加到右边
+			function addSlelectedToRight() {
+				for(var i=0;i<arr1.length;i++) {
+					if(arr1[i].selected == true) {
+						selectElement2.appendChild(arr1[i]);
+						i--;
+					}
+				}
+			}
+			//全部添加到右边
+			function addAllToRight() {
+				for(var i=0;i<arr1.length;i++) {
+					selectElement2.appendChild(arr1[i]);
+					i--;
+				}
+			}
+			//选中添加到左边
+			function addSlelectedToLeft() {
+				for(var i=0;i<arr2.length;i++) {
+					if(arr2[i].selected == true) {
+						selectElement1.appendChild(arr2[i]);
+						i--;
+					}
+				}
+			}
+			//全部添加到左边
+			function addAllToLeft() {
+				for(var i=0;i<arr2.length;i++) {
+					selectElement1.appendChild(arr2[i]);
+					i--;
+				}
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
