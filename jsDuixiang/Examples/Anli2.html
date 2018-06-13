@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>动态显示时间</title>
+	</head>
+	<body>	
+		<div id="div1"></div>
+		<script type="text/javascript">
+			function showtime() {
+				//先得到时间
+				var date = new Date();
+				var localdate = date.toLocaleString();
+				//得到div对象,
+				var divElement = document.getElementById("div1");
+				//使用innerHTML属性显示时间
+				divElement.innerHTML = localdate;
+			}
+			//使用定时器动态实现时间
+			window.setInterval("showtime();",100);
+		</script>
+	</body>
+</html>

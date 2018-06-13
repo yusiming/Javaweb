@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>全选练习</title>
+	</head>
+	<body>
+		<input type="checkbox" id="id1" onclick="selectAllOrNone();"/>全选/全不选
+		<br/>
+		<input type="checkbox" name="loves" value="篮球"/>篮球
+		<input type="checkbox" name="loves" value="乒乓球"/>乒乓球
+		<input type="checkbox" name="loves" value="羽毛球"/>羽毛球
+		<br/>
+		<input type="button" value="全选" onclick="selectAll();"/>
+		<input type="button" value="全不选" onclick="selectNone();"/>
+		<input type="button" value="反选" onclick="selectOpposite();"/>
+		<script type="text/javascript">
+			//先得到复选框对象
+			var arr1 = document.getElementsByName("loves");
+			//全选方法
+			function selectAll() {
+				//遍历数组,更改每一个复选框的checked属性
+				for(var i=0;i<arr1.length;i++) {
+					arr1[i].checked = true;
+				}
+			}
+			//全不选方法
+			function selectNone() {
+				//遍历数组,更改每一个复选框的checked属性
+				for(var i=0;i<arr1.length;i++) {
+					arr1[i].checked = false;
+				}
+			}
+			//反选方法
+			function selectOpposite() {
+				for(var i=0;i<arr1.length;i++) {
+					if(arr1[i].checked == true) {
+						arr1[i].checked = false;
+					}
+					else {
+						arr1[i].checked = true;
+					}
+				}
+			}
+			//全选或者全不选
+			function selectAllOrNone() {
+				//先得到此复选框
+				var checkboxElement1 = document.getElementById("id1");
+				if (checkboxElement1.checked == true) {
+					//执行全选方法
+					selectAll();
+				}
+				else {
+					//执行全不选方法
+					selectNone();
+				}
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
