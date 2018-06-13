@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>案例六，动态生成表格</title>
+	</head>
+	<body>
+		行:<input type="text" id="text1"/>
+		列:<input type="text" id="text2"/>
+		<br/>
+		<input type="button" value="生成表格" onclick="createTable1();"/>
+		<br/>
+		<div id="divid"></div>
+	</body>
+	<script type="text/javascript">	
+		var textElement1 = document.getElementById("text1");
+		var textElement2 = document.getElementById("text2");
+		var divElement = document.getElementById("divid");
+		function createTable1() {
+			var a = textElement1.value;
+			var b = textElement2.value;
+			var tableElement = document.createElement("table");
+			tableElement.setAttribute("border",1);
+			tableElement.setAttribute("width",a*50);
+			tableElement.setAttribute("height",b*50);
+			tableElement.setAttribute("cellspacing",0);
+			for(var i=1;i<=a;i++) {
+				var trElement = document.createElement("tr");
+				for(j=1;j<=b;j++) {
+					var tdElement = document.createElement("td");
+					trElement.appendChild(tdElement);
+				}
+				tableElement.appendChild(trElement);
+			}
+			divElement.appendChild(tableElement);
+		}
+	</script>
+</html>

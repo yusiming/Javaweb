@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>案例五，实现联动选择</title>
+	</head>
+	<body>
+		<!--this.value表示当前选择的value值-->
+		<select name="国家" onchange="change1(this.value);">
+			<option value="none" selected=true >--请选择--</option>
+			<option value="中国">中国</option>
+			<option value="德国">德国</option>
+			<option value="美国">美国</option>
+			<option value="日本">日本</option>
+		</select>
+		<select  id="select1" ></select>
+	</body>
+	<script type="text/javascript">	
+		//创建一个二维数组，存放数据
+		var arr1 = new Array(4);
+		arr1[0] = ["中国","上海","杭州","北京"];
+		arr1[1] = ["德国","慕尼黑","柏林","狼堡"];
+		arr1[2] = ["美国","休斯顿","纽约","底特律"];
+		arr1[3] = ["日本","长崎","东京","北海道"];
+		//获取select对象
+		var selectElement = document.getElementById("select1");
+		function change1(val) {
+			//往select添加option之前，先判断里面是否有上一次添加进来的option
+			//如果有则删除,防止出现多余的option
+			var elementArr = selectElement.getElementsByTagName("option");
+			for(var i=0;i<elementArr.length;i++) {
+				selectElement.removeChild(elementArr[i]);
+				i--;
+			}
+			//向select中添加option
+			for(var i=0;i<arr1.length;i++) {
+				//遍历数组，判断this.value与哪一个城市名相同
+				if(val == arr1[i][0]) {
+					//遍历数组，创建其余的option，添加到select
+					for(var j=1;j<arr1[i].length;j++) {
+						var optionElement = document.createElement("option");
+						var textElement = document.createTextNode(arr1[i][j]);
+						optionElement.appendChild(textElement);
+						selectElement.appendChild(optionElement);
+					}
+				}
+			}
+		}
+	</script>
+</html>
