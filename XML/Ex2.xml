@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--特殊字符-->
+<p>
+<a id="id1">&lt;&gt;</a>
+<b id="id2">&quot;</b>
+<c id="id3">&apos;</c>
+<d id="id4">&amp;</d>
+</p>

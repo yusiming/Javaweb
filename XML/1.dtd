@@ -1,0 +1,3 @@
+<!ELEMENT person (name,age)>
+<!ELEMENT name (#PCDATE)>
+<!ELEMENT age (#PCDATE)>
