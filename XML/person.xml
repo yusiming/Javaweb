@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><person>
+    <p>
+        <name>虞</name>
+        <age>20</age>
+        <sex>男</sex>
+    </p>
+    <P>
+        <name>"李四"</name>
+        <age>21</age>
+    </P>
+</person>

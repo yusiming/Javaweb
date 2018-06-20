@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person xmlns:x1="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="htttp://www.test.cn/2018619"
+x1:schemaLocation="htttp://www.test.cn/2018619 1.xsd" id1="123">
+    <name>张三</name>
+    <name>张三</name>
+    <age>20</age>
+</person>

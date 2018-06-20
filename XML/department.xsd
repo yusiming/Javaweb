@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.example.org/department" 
+ elementFormDefault="qualified">
+ <!-- 部门名称 -->
+ <element name="name" type="int"></element>
+</schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+targetNamespace="htttp://www.test.cn/2018619"
+elementFormDefault="qualified">
+    <element name="person">
+        <complexType>
+            <sequence>
+            <!--<all>-->
+            <!--<choice>-->
+                <element name="name" type="string" maxOccurs="2"></element>
+                <element name="age" type="int"></element>
+            <!--</choice>-->
+            <!--</all>-->
+            </sequence>
+            <attribute name="id1" type="int" use="required"></attribute>
+        </complexType>
+    </element>
+
+</schema>

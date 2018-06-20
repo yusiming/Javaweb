@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 数据文件 引用多个Schema -->
+<company xmlns = "http://www.example.org/company"
+	xmlns:dept="http://www.example.org/department"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/company company.xsd http://www.example.org/department department.xsd" 
+>
+	<employee age="30">
+		<!-- 部门名称 -->
+		<dept:name>1</dept:name>
+		<!-- 员工名称 -->
+		<name>王晓晓</name>   
+	</employee>
+</company>

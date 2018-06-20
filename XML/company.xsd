@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/company" 
+elementFormDefault="qualified">
+	<element name="company">
+		<complexType>
+			<sequence>
+				<element name="employee">
+					<complexType>
+						<sequence>
+							<!-- 引用任何一个元素 -->
+							<any></any>
+							<!-- 员工名称 -->
+							<element name="name"></element>
+						</sequence>
+						<!-- 为employee元素添加属性 -->
+						<attribute name="age" type="int"></attribute>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
