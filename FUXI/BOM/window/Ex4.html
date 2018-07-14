@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器方法</title>
+</head>
+<body>
+    <!--<input type="button" value="清除" onclick="clear1();"/>-->
+    <input type="button" value="清除" onclick="clear2();"/>
+</body>
+    <script type="text/javascript">
+       //var id1 = window.setInterval("alert('123');",2000);
+        var id2 = window.setTimeout("alert('123');",3000);
+        /*function clear1() {
+            window.clearInterval(id1);
+        }*/
+        function clear2() {
+            window.clearTimeout(id2);
+        }
+    </script>
+</html>

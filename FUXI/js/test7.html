@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中的方法</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //方法一
+        function add(a,b) {
+            return a+b;
+        }
+        var sum = add(2,2);
+        alert(sum);
+        //方法二
+        var add1 = function (a,b) {
+            return a+b;
+        }
+        alert(add1(1,2));
+        var canshu = "x,y";
+        var fangfati = "return x+y;";
+        var add2 = new Function(canshu,fangfati);
+        alert(add2(1,10));
+    </script>
+</body>
+</html>

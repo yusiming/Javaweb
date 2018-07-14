@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date对象</title>
+</head>
+<body>
+
+</body>
+    <script type="text/javascript">
+        var nowDate = new Date();
+        document.write(nowDate);
+        document.write("<br/>");
+        //toLocalString方法把时间转换成本地时间格式
+        document.write(nowDate.toLocaleString());
+        document.write("<br/>");
+        //getFullYear得到当前年份
+        document.write(nowDate.getFullYear());
+        document.write("<br/>");
+        //getMonth得到月份信息，0-11
+        document.write(nowDate.getMonth()+1);
+        //得到星期信息0-6,0代表信息日
+        document.write("<br/>");
+        document.write(nowDate.getDay());
+        //日信息
+        document.write("<br/>");
+        document.write(nowDate.getDate());
+        //小时
+        document.write("<br/>");
+        document.write(nowDate.getHours());
+        //分钟,秒
+        document.write("<br/>");
+        document.write(nowDate.getMinutes())
+        document.write("<br/>");
+        document.write(nowDate.getSeconds())
+        //getTime方法返回1970，1，1至今的毫秒数
+        document.write(nowDate.getTime());
+    </script>
+</html>

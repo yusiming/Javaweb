@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本语句</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var n = 4;
+        if (n == 4) {
+            document.write(4)
+        }
+        else document.write("other");
+        document.write("<br/>");
+        while (n > 0) {
+            document.write(n);
+            document.write("<br/>");
+            n--;
+        }
+        for (var i=0;i<=5;i++) {
+            document.write(i);
+            document.write("<br/>");
+        }
+        switch (n) {
+            case 0:
+                document.write(4);
+                break;
+            default :
+                document.write("不是4");
+                break
+        }
+        document.write("<br/>");
+        var str = "111";
+        document.write(str + 1);
+        document.write("<br/>");
+        document.write(str - 1);
+        document.write("<br/>");
+        if (str === 111) {
+            document.write("true");
+        }
+        else document.write("false");
+    </script>
+</body>
+</html>

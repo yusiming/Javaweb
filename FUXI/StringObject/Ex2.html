@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>与java相似的方法</title>
+</head>
+<body>
+</body>
+    <script type="text/javascript">
+        var str1 = "虞";
+        var str2 = "四明";
+        //concat方法连接字符串
+        var str3 = str1.concat(str2);
+        document.write(str3);
+        document.write("<hr color='red' size='0'/>");
+        //charAt方法返回指定位置的字符
+        document.write(str3.charAt(0));
+        document.write("<hr color='red' size='0'/>");
+        document.write(str3.charAt(1));
+        document.write("<hr color='red' size='0'/>");
+        document.write(str3.charAt(2));
+        //indexOf方法返回指定字符串的位置
+        document.write("<hr color='red' size='0'/>");
+        document.write(str3.indexOf("明"));
+        document.write("<hr color='red' size='0'/>");
+        //split方法切分字符串，返回一个数组
+        var str4 = "虞-四-明";
+        var arr1 = str4.split("-");
+        for (var i=0;i<arr1.length;i++) {
+            document.write(arr1[i]);
+            document.write("<hr color='red' size='0'/>");
+        }
+        //replace方法替换字符
+        document.write(str3.replace("四明","小明"));
+        //subStr和subString方法
+        document.write("<hr color='red' size='0'/>");
+        var str5 = str3.replace("四明","小明") + str3;
+        document.write(str5.substr(0,3));
+        document.write("<hr color='red' size='0'/>");
+        document.write(str5.substring(3,6));
+    </script>
+</html>

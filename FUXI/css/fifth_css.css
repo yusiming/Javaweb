@@ -1,0 +1,9 @@
+div {
+    background-color: deeppink;
+}
+div.div_class_1 {
+    background-color: blue;
+}
+div#div_id_1 {
+    background-color: antiquewhite;
+}

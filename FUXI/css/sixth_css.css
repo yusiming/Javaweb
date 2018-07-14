@@ -1,0 +1,22 @@
+div#div1 {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    border: 2px inset blue;
+    padding: 50px;
+}
+div#div2 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    margin-left: 100px;
+    border-right: 2px dashed black;
+}
+div#div3 {
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border: 2px ridge burlywood;
+    padding-right: 20px;
+}

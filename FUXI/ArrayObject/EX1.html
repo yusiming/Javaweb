@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array对象</title>
+</head>
+<body>
+</body>
+    <script type="text/javascript">
+        //length属性
+        var arr1 = [1,2,3];
+        document.write(arr1.length);
+        //concat方法连接数组
+        var arr2 = [4,5,6];
+        document.write("<hr/>");
+        document.write(arr1.concat(arr2));
+        //join方法使用指定的字符分割数组
+        document.write("<hr/>");
+        document.write(arr1.join("-"));
+        document.write("<hr/>");
+        //push方法向数组末尾添加元素，并返回新数组的长度
+        document.write(arr1.push(100));
+        document.write("<hr/>");
+        document.write(arr1);
+        var arr3 = [11,22,33];
+        document.write("<hr/>");
+        //向数组添加一个数组时，把这个数组当作一个元素添加进去
+        document.write(arr2.push(arr3));
+        document.write("<hr/>");
+        //pop方法删除并返回最后一个元素
+        document.write(arr2.pop());
+        document.write("<hr/>");
+        //reverse方法颠倒数组中元素的顺序
+        document.write(arr2.reverse());
+    </script>
+</html>

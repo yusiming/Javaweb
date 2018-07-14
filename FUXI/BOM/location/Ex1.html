@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location对象，得到有关URL的信息</title>
+</head>
+<body>
+    <input type="button" value="跳转" onclick="change();"/>
+</body>
+    <script type="text/javascript">
+        //href属性得到，或者设置当前请求的url地址
+        document.write(location.href);
+        //与一个按钮绑定，点击跳转到另一个url
+        function change() {
+            location.href = "../../js/test5.html";
+        }
+    </script>
+</html>

@@ -1,0 +1,24 @@
+div#div1 {
+    background-color: antiquewhite;
+    color: orangered;
+    width: 200px;
+    height: 200px;
+    border: 2px solid orangered;
+    position: relative;
+    top: 200px;
+    left: 100px;
+}
+div#div2 {
+    background-color: antiquewhite;
+    color: orangered;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+}
+div#div3 {
+    background-color: antiquewhite;
+    color: orangered;
+    width: 200px;
+    height: 200px;
+    border: 2px solid salmon;
+}

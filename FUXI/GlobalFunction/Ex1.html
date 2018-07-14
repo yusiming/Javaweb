@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局函数，不属于哪一个对象</title>
+</head>
+<body>
+</body>
+    <script type="text/javascript">
+        //eval方法
+        var str1 = "alert('虞四明');";
+        eval(str1);
+        //encodeURI、decodeURI、encodeURICompennet、decodeURICompennet
+        var str2 = "虞四明abc";
+        var str3 = encodeURI(str2);
+        document.write(str3);
+        document.write("<br/>");
+        document.write(decodeURI(str3));
+        document.write("<br/>");
+        //isNaN判断是否不是一个数字
+        document.write(isNaN(123));
+        //parseInt,转换成int类型
+        var n = parseInt("123");
+        document.write("<br/>");
+        document.write(n+1);
+    </script>
+</html>

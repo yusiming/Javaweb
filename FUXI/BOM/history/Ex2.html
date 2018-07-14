@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history对象</title>
+</head>
+<body>
+    <a href="Ex3.html" target="_self">到Ex3</a>
+    <br/>
+    <input type="button" value="后退" onclick="back();"/>
+    <input type="button" value="前进" onclick="advance();"/>
+
+</body>
+    <script type="text/javascript">
+        function advance() {
+            history.forward();
+        }
+        function back() {
+            history.back();
+        }
+    </script>
+</html>
