@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联动选择</title>
+</head>
+<body>
+    <select id="select1" onchange="changeToNewCountry(this.value);">
+        <option value="o">--请选择--</option>
+        <option value="中国">中国</option>
+        <option value="美国">美国</option>
+        <option value="日本">日本</option>
+        <option value="德国">德国</option>
+    </select>
+    <select id="select2"></select>
+</body>
+    <script type="text/javascript">
+        var selectElement2 = document.getElementById("select2");
+        var optionElement2 = selectElement2.getElementsByTagName("option");
+        //使用数组存放数据
+        var arr = new Array(4);
+        arr[0] = ["中国","上海","北京","深圳"];
+        arr[1] = ["美国","华盛顿","纽约","休斯顿"];
+        arr[2] = ["日本","东京","广岛","长崎"];
+        arr[3] = ["德国","慕尼黑","柏林","狼堡"];
+        function changeToNewCountry(city) {
+            //判断slelct中是否有option
+            for (var i=0;i<optionElement2.length;i++) {
+                selectElement2.removeChild(optionElement2[i]);
+                i--;
+            }
+            for (var i=0;i<arr.length;i++) {
+                if (arr[i][0] == city) {
+                    for (var j=1;j<arr[i].length;j++) {
+                        //创建option标签
+                        var optionElement = document.createElement("option");
+                        optionElement.appendChild(document.createTextNode(arr[i][j]));
+                        selectElement2.appendChild(optionElement);
+                    }
+                }
+            }
+        }
+    </script>
+</html>

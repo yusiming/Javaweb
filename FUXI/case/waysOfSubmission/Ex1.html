@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>得到焦点失去焦点事件</title>
+</head>
+<body>
+  <input type="text" name="text1" value="虞" id="id1" onfocus="focus1();" onblur="blur1();"/>
+</body>
+    <script type="text/javascript">
+        //函数名不能取focus和blur
+        function focus1() {
+            document.getElementById("id1").value = "";
+        }
+        function blur1() {
+            document.getElementById("id1").value = "虞";
+        }
+    </script>
+</html>

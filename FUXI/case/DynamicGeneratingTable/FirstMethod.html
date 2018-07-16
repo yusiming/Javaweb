@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态生成表格方法一</title>
+</head>
+<body>
+  行:<input type="text" id="text1"/>
+  列:<input type="text" id="text2"/>
+  <br/>
+  <input type="button" id="button1" value="生成表格"onclick="generateTable();"/>
+  <br/>
+  <div id="div1"></div>
+</body>
+    <script type="text/javascript">
+        function generateTable() {
+            var divElement = document.getElementById("div1");
+            var textElement1 = document.getElementById("text1");
+            var textElement2 = document.getElementById("text2");
+            //行
+            var rows = textElement1.value;
+            //列
+            var clos = textElement2.value;
+            var table = "<table border='1' cellspacing='0' bgcolor='#e9967a' width='200' height='200'>";
+            for (var i=0;i<rows;i++) {
+                table += "<tr>";
+                for (var j=0;j<clos;j++) {
+                    table += "<td></td>";
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            divElement.innerHTML = table;
+        }
+    </script>
+</html>

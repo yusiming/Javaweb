@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单的提交方式</title>
+</head>
+<body>
+  <form id="form1" method="post">
+      <input type="text" name="name" id="text1"/>
+      <input type="button" value="提交" onclick="submit1();">
+      <a href="1.html?name=yu">使用超链接提交</a>
+  </form>
+</body>
+    <script type="text/javascript">
+        function submit1() {
+            var formElement = document.getElementById("form1");
+            formElement.action = "1.html";
+            formElement.submit();
+        }
+    </script>
+</html>
