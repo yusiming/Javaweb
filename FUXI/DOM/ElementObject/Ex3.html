@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取标签下面的子标签</title>
+</head>
+<body>
+    <ul id="id1">
+        <li id="id2">111</li>
+        <li id="id3">222</li>
+        <li id="id4">333</li>
+    </ul>
+</body>
+    <script type="text/javascript">
+        var ulElement = document.getElementById("id1");
+        //childNodes属性兼容性较差
+        window.alert(ulElement.childNodes.length);
+        var liArr1 = ulElement.getElementsByTagName("li");
+        for (var i=0;i<liArr1.length;i++) {
+            window.alert(liArr1[i].getAttribute("id"));
+        }
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态显示时间</title>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+    <script type="text/javascript">
+        var div1 = document.getElementById("div1");
+        function time() {
+            var date = new Date().toLocaleString();
+            div1.innerHTML = date;
+        }
+        window.setInterval("time()",1000)
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

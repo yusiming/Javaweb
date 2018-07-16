@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作dom树</title>
+    <link rel="stylesheet" href="1.css"/>
+</head>
+<body>
+    <div id="div1">
+        <ul id="ul">
+            <li id="li1">111</li>
+            <li id="li2">222</li>
+            <li id="li3">333</li>
+        </ul>
+    </div>
+    <br/>
+    <div id="div2"></div>
+    <br/>
+    <input type="button" value="剪切div1到div2" onclick="add();"/>
+    <input type="button" value="复制div1到div2" onclick="clone1();"/>
+    <br/>
+    <input type="button" value="在111之前添加000" onclick="add1();"/>
+    <br/>
+    <input type="button" value="删除333" onclick="remove1();"/>
+    <br/>
+    <input type="button" value="使用twotwotwo代替222" onclick="replace1();"/>
+</body>
+    <script type="text/javascript">
+        var ulElemnet = document.getElementById("ul");
+        var divElement2 = document.getElementById("div2");
+        var liElement1 = document.getElementById("li1");
+        var liElement2 = document.getElementById("li2");
+        var liElement3 = document.getElementById("li3");
+        function add() {
+            divElement2.appendChild(ulElemnet);
+        }
+        function add1() {
+            var liElement0 = document.createElement("li");
+            var text0 = document.createTextNode("000");
+            liElement0.appendChild(text0);
+            ulElemnet.insertBefore(liElement0,liElement1);
+        }
+        function remove1() {
+            ulElemnet.removeChild(liElement3);
+        }
+        function replace1() {
+            var twoElement = document.createElement("li");
+            twoElement.appendChild(document.createTextNode("twotwotwo"));
+            ulElemnet.replaceChild(twoElement,liElement2);
+        }
+        function clone1() {
+            divElement2.appendChild(ulElemnet.cloneNode(true));
+        }
+    </script>
+</html>

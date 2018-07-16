@@ -1,0 +1,17 @@
+select#select1 {
+    width: 100px;
+    height: 100px;
+}
+select#select2 {
+    width: 100px;
+    height: 100px;
+}
+div#div1 {
+    position: relative;
+    left: 100px;
+}
+div#div2 {
+    position: relative;
+    top: -145px;
+    left: 300px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node节点的属性</title>
+</head>
+<body>
+    <span id="id1" name="123">虞四明</span>
+</body>
+    <script type="text/javascript">
+        //标签节点的NodeType、NodeName、NodeValue
+        var textElement = document.getElementById("id1");
+        window.alert(textElement.nodeType);
+        window.alert(textElement.nodeName);
+        window.alert(textElement.nodeValue);
+        //属性节点的NodeType、NodeName、NodeValue
+        var attributeElement = textElement.getAttributeNode("name");
+        window.alert(attributeElement.nodeType);
+        window.alert(attributeElement.nodeName);
+        window.alert(attributeElement.nodeValue);
+        //文本节点的NodeType、NodeName、NodeValue
+        var text = textElement.lastChild;
+        window.alert(text.nodeType);
+        window.alert(text.nodeName);
+        window.alert(text.nodeValue);
+    </script>
+</html>

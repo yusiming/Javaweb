@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML的使用</title>
+    <style type="text/css">
+        div#div2 {
+            width: 200px;
+            height: 200px;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">虞四明</div>
+    <div id="div2"></div>
+</body>
+    <script type="text/javascript">
+        window.alert(document.getElementById("div1").innerHTML);
+        document.getElementById("div2").innerHTML = "<table><tr><td>111</td><td>222</td></tr><tr><td>333</td><td>444</td></tr></table>";
+    </script>
+</html>

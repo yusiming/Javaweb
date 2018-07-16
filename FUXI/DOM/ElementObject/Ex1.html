@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>element对象</title>
+</head>
+<body>
+    <input type="text" id="id1"  value="虞"/>
+</body>
+    <script type="text/javascript">
+        var textElement = document.getElementById("id1");
+        //这种方法取不到class的值
+        // document.write(textElement.class);
+        document.write(textElement.getAttribute("class"));
+        document.write("<br/>");
+        textElement.setAttribute("class","class1");
+        document.write(textElement.getAttribute("class"));
+    </script>
+</html>

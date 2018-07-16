@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" width="250" height="250">
+        <tr>
+            <th>操作</th>
+            <th>编号</th>
+            <th>姓名</th>
+        </tr>
+        <tr align="center">
+            <td><input type="button" value="选择" onclick="changeValue('001','张三');"/></td>
+            <td>001</td>
+            <td>张三</td>
+        </tr>
+        <tr align="center">
+            <td><input type="button" value="选择" onclick="changeValue('002','李四');"/></td>
+            <td>002</td>
+            <td>李四</td>
+        </tr>
+        <tr align="center">
+            <td><input type="button" value="选择" onclick="changeValue('003','王五');"/></td>
+            <td>003</td>
+            <td>王五</td>
+        </tr>
+    </table>
+</body>
+    <script type="text/javascript">
+        var windowObject = window.opener;
+        var textElement1 = windowObject.document.getElementById("text1");
+        var textElement2 = windowObject.document.getElementById("text2");
+        function changeValue(number,name) {
+            textElement1.value = number;
+            textElement2.value = name;
+            window.close();
+        }
+    </script>
+</html>

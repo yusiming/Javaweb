@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByName、getElementsByTagname方法得到对象数组</title>
+</head>
+<body>
+    <input type="text" name="name1" value="aaa"/><br/>
+    <input type="text" name="name1" value="bbb"/><br/>
+    <input type="text" name="name1" value="ccc"/><br/>
+</body>
+    <script type="text/javascript">
+        var arr1 = document.getElementsByName("name1");
+        for (var i=0;i<arr1.length;i++) {
+            window.alert(arr1[i].value);
+        }
+        var arr2 = document.getElementsByTagName("input");
+        for (var i=0;i<arr1.length;i++) {
+            window.alert(arr1[i].value);
+        }
+    </script>
+</html>

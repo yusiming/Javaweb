@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉列表选择</title>
+    <link rel="stylesheet" href="1.css"/>
+</head>
+<body>
+    <div id="div1">
+        <select multiple="multiple" id="select1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <br/>
+        <input type="button" value="选中添加到右边>>" onclick="selectToRight();"/><br/>
+        <input type="button" value="全部添加到右边>>" onclick="selectAllToRight();"/>
+    </div>
+    <div id="div2">
+        <select multiple="multiple" id="select2">
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+        <br/>
+        <input type="button" value="<<选中添加到左边" onclick="selectToLeft()"/><br/>
+        <input type="button" value="<<全部添加到左边" onclick="selectAllToLeft()"/>
+    </div>
+</body>
+    <script type="text/javascript">
+        var select1 = document.getElementById("select1");
+        var arr1 = select1.getElementsByTagName("option");
+        var select2 = document.getElementById("select2");
+        var arr2 = select2.getElementsByTagName("option");
+        function selectToRight() {
+            for (var i=0;i<arr1.length;i++) {
+                if (arr1[i].selected == true) {
+                    select2.appendChild(arr1[i]);
+                    i--;
+                }
+            }
+        }
+        function selectAllToRight() {
+            for (var i=0;i<arr1.length;i++) {
+                select2.appendChild(arr1[i]);
+                i--;
+            }
+        }
+        function selectToLeft() {
+            for (var i=0;i<arr2.length;i++) {
+                if (arr2[i].selected == true) {
+                    select1.appendChild(arr2[i]);
+                    i--;
+                }
+            }
+        }
+        function selectAllToLeft() {
+            for (var i=0;i<arr2.length;i++) {
+                select1.appendChild(arr2[i]);
+                i--;
+            }
+        }
+    </script>
+</html>

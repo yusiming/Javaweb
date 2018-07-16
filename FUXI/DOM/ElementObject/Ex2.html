@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>removeAttribute</title>
+</head>
+<body>
+    <input type="text" name="虞" id="id1" value="虞四明"/>
+</body>
+    <script type="text/javascript">
+        var textElement = document.getElementById("id1");
+        window.alert(textElement.getAttribute("name"));
+        textElement.removeAttribute("name");
+        window.alert(textElement.getAttribute("name"));
+        //此方法无法删除value属性的值
+        textElement.removeAttribute("value");
+        window.alert(textElement.getAttribute("value"));
+    </script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加节点</title>
+</head>
+<body>
+    <ul id="id1">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <br/>
+    <input type="button" value="添加" onclick="add();"/>
+</body>
+    <script type="text/javascript">
+        var ulElemnet = document.getElementById("id1");
+        function add() {
+            var liElement = document.createElement("li");
+            var textElement = document.createTextNode("444");
+            liElement.appendChild(textElement);
+            ulElemnet.appendChild(liElement);
+        }
+    </script>
+</html>

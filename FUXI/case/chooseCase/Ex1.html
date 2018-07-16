@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择练习</title>
+</head>
+<body>
+    <input type="checkbox" id="checkbox1" onclick="selectAllOrNone();"/>全选/全不选
+    <br/>
+    <input type="checkbox" name="love" id="id1"/>足球<br/>
+    <input type="checkbox" name="love" id="id2"/>篮球<br/>
+    <input type="checkbox" name="love" id="id3"/>排球<br/>
+    <input type="checkbox" name="love" id="id4"/>冰球<br/>
+    <input type="button" value="全选" onclick="selectAll();"/>
+    <input type="button" value="全不选" onclick="selectNone();"/>
+    <input type="button" value="反选" onclick="selectOpposite();"/>
+</body>
+    <script type="text/javascript">
+        var arr1 = document.getElementsByName("love");
+        var checkbox1Element = document.getElementById("checkbox1");
+        function selectAll() {
+            for (var i=0;i<arr1.length;i++) {
+                arr1[i].checked = true;
+            }
+        }
+        function selectNone() {
+            for (var i=0;i<arr1.length;i++) {
+                arr1[i].checked = false;
+            }
+        }
+        function selectOpposite() {
+            for (var i=0;i<arr1.length;i++) {
+                if (arr1[i].checked == true) {
+                    arr1[i].checked = false;
+                }
+                else arr1[i].checked = true;
+            }
+        }
+        function selectAllOrNone() {
+            if (checkbox1Element.checked == true) {
+                for (var i=0;i<arr1.length;i++) {
+                    arr1[i].checked = true;
+                }
+            }
+            else {
+                for (var i=0;i<arr1.length;i++) {
+                    arr1[i].checked = false;
+                }
+            }
+
+        }
+    </script>
+</html>
