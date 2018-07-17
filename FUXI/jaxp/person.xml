@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE person SYSTEM "person.dtd">
+<person>
+    <p1>
+        <name>虞四明</name>
+        <age>20</age>
+    </p1>
+    <p1>
+        <name>虞小明</name>
+        <age>30</age>
+    </p1>
+</person>

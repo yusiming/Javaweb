@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TVSCHEDULE SYSTEM "TV.dtd">
+<TVSCHEDULE NAME="cctv">
+    <CHANNEL CHAN="1">
+        <BANNER>yu</BANNER>
+        <DAY>
+            <DATE>si</DATE>
+            <HOLIDAY>ming</HOLIDAY>
+        </DAY>
+    </CHANNEL>
+    <CHANNEL CHAN="2">
+        <BANNER>yu</BANNER>
+        <DAY>
+            <DATE>si</DATE>
+            <PROGRAMSLOT VTR="1">
+                <TIME>ming</TIME>
+                <TITLE RATING="100" LANGUAGE="chinese">ming</TITLE>
+            </PROGRAMSLOT>
+        </DAY>
+    </CHANNEL>
+</TVSCHEDULE>

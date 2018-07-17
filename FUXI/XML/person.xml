@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE person SYSTEM "person.dtd">-->
+<!DOCTYPE person[
+        <!ELEMENT person (name,age,sex,school)>
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name
+                id1 CDATA #REQUIRED
+        >
+        <!ELEMENT age (#PCDATA)>
+        <!ATTLIST age
+                id2 (AA|BB|CC) #IMPLIED
+        >
+        <!ELEMENT sex (#PCDATA)>
+        <!ATTLIST sex
+                id3 CDATA #FIXED "男"
+        >
+        <!ELEMENT school ANY>
+        <!ATTLIST school
+                id4 CDATA "理工"
+        >
+]>
+<person>
+    <name id1="1">虞小明</name>
+    <age id2="AA">20</age>
+    <sex id3="男">111</sex>
+    <school id4="河南理工">111</school>
+</person>

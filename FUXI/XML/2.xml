@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="1.css"?>
+<!--<!DOCTYPE person SYSTEM "person.dtd">-->
+<!DOCTYPE person [
+        <!ELEMENT person (name,age)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        ]>
+<person>
+    <name>虞四明虞四明虞四明虞四明</name>
+    <age>yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</age>
+</person>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="1.css"?>
+<person>
+    <名字 id="id1">虞四明</名字>
+    <age>20&lt;&gt;</age>
+    <![CDATA[<>&"']]>
+    <!--注释不能嵌套-->
+</person>
