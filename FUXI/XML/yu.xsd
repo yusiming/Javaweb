@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+targetNamespace="yu/si/ming"
+elementFormDefault="qualified">
+    <element name="person">
+        <complexType>
+            <sequence>
+            <!--<all>-->
+            <!--<choice>-->
+                <element name="name" type="string" maxOccurs="2"></element>
+                <element name="age" type="int"></element>
+            <!--</choice>-->
+            </sequence>
+            <!--</all>-->
+            <attribute name="id1" type="int" use="optional"></attribute>
+        </complexType>
+    </element>
+</schema>
