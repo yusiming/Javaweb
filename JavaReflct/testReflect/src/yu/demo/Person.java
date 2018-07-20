@@ -27,7 +27,7 @@ public class Person {
         return age;
     }
 
-    public void setAge(String age) {
+    private void setAge(String age) {
         this.age = age;
     }
 }
