@@ -3,4 +3,45 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>YSM1</servlet-name>
+        <servlet-class>yu.servletTest.Myservlet</servlet-class>
+        <init-param>
+            <param-name>p1</param-name>
+            <param-value>v1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>p2</param-name>
+            <param-value>v2</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YSM1</servlet-name>
+        <url-pattern>/yu/Myservlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>YSM2</servlet-name>
+        <servlet-class>yu.servletTest.Bservlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YSM2</servlet-name>
+        <url-pattern>/yu/Byservlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>YSM3</servlet-name>
+        <servlet-class>yu.servlet.AServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YSM3</servlet-name>
+        <url-pattern>/yu/servlet/AServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>YSM4</servlet-name>
+        <servlet-class>yu.servlet.BServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YSM4</servlet-name>
+        <url-pattern>/yu/servlet/Byservlet</url-pattern>
+    </servlet-mapping>
 </web-app>

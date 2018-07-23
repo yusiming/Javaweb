@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generateImages/src/yu/images/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="29" column="91" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="97" />
+            <state relative-caret-position="250">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VerifyCode.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VerifyCode.java" pinned="false" current-in-tab="false">
         <entry file="jar://D:/BaiduNetdiskDownload/JavaWeb视频教程_day8-资料源码/day08_code/day08_2/itcast-tools-1.4.2.jar!/cn/itcast/vcode/utils/VerifyCode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2325">
@@ -225,12 +225,12 @@
       <option name="presentableId" value="Default" />
       <updated>1532071195870</updated>
       <workItem from="1532071197211" duration="1074000" />
-      <workItem from="1532072360102" duration="4130000" />
+      <workItem from="1532072360102" duration="4722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5204000" />
+    <option name="totallyTimeSpent" value="5796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -325,6 +325,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/BaiduNetdiskDownload/JavaWeb视频教程_day8-资料源码/day08_code/day08_2/itcast-tools-1.4.2.jar!/cn/itcast/vcode/utils/VerifyCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2279#2280#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generateImages/src/yu/images/Demo2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -337,22 +349,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generateImages/src/yu/images/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="29" column="91" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="97" />
+        <state relative-caret-position="250">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/BaiduNetdiskDownload/JavaWeb视频教程_day8-资料源码/day08_code/day08_2/itcast-tools-1.4.2.jar!/cn/itcast/vcode/utils/VerifyCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2297#2298#0" expanded="true" />
           </folding>
         </state>
       </provider>
