@@ -42,7 +42,7 @@ public class Test4 {
 
             }
         } catch (Exception e) {
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         } finally {
             if (resultSet != null) {
                 resultSet.close();

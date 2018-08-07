@@ -20,19 +20,19 @@ public class Test5 {
      */
     public static void main(String[] args) throws  ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/exam?useSSL=false", "root", "314159");
+        try (//连接数据库
+             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/exam?useSSL=false", "root", "314159");
+             //得到statement对象
              Statement statement = connection.createStatement();
+             //发送查询语句,得到结果集
              ResultSet resultSet = statement.executeQuery("select * from exam.emp")) {
-            //连接数据库
-            //得到statement对象
-            //发送查询语句
             //移动到最后一行
             resultSet.last();
             //输出行数
             System.out.println(resultSet.getRow());
             //移动到第一行，不然无法打印数据
             resultSet.first();
-            //得到列数
+            //得到元数据，再得到列数
             int columnCount = resultSet.getMetaData().getColumnCount();
             //遍历输出结果集
             while (resultSet.next()) {
@@ -43,7 +43,7 @@ public class Test5 {
                 System.out.println();
             }
         } catch (Exception e) {
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         }
     }
 }
