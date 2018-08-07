@@ -21,7 +21,7 @@ public class Test6 {
      * @param: [username, password]
      * @return: boolean
      */
-    public static boolean login(String username, String password) throws ClassNotFoundException, SQLException {
+    private static boolean login(String username, String password) throws ClassNotFoundException, SQLException {
         //加载驱动类.(注册驱动),所有的java.sql.Driver的实现类都提供了static代码块，把自己注册到DriverManager中
         Class.forName("com.mysql.cj.jdbc.Driver");
         //得到连接对象
