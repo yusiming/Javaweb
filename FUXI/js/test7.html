@@ -6,17 +6,18 @@
 </head>
 <body>
     <script type="text/javascript">
-        //方法一
+        //定义方法的方式一，这种使用最多
         function add(a,b) {
             return a+b;
         }
         var sum = add(2,2);
         alert(sum);
-        //方法二
+        //方式二,
         var add1 = function (a,b) {
             return a+b;
         }
         alert(add1(1,2));
+        //方式三，使用关键字Function，传入两个参数，都是字符串，一个是参数，一个是方法体
         var canshu = "x,y";
         var fangfati = "return x+y;";
         var add2 = new Function(canshu,fangfati);

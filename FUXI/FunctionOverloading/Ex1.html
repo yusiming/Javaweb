@@ -7,14 +7,15 @@
 <body>
 
 </body>
-    <script type="text/javascript">
-        function add() {
-            var sum = 0;
-            for (var i=0;i<arguments.length;i++) {
-                sum += arguments[i];
-            }
-            document.write(sum)
+<script type="text/javascript">
+    <!--模拟函数重载-->
+    function add() {
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
         }
-        add(1,2,3,4,6)
-    </script>
+        return sum;
+    }
+    document.write(add(1,2,3,4))
+</script>
 </html>

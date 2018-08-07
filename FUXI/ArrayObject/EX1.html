@@ -13,21 +13,27 @@
         //concat方法连接数组
         var arr2 = [4,5,6];
         document.write("<hr/>");
-        document.write(arr1.concat(arr2));
-        //join方法使用指定的字符分割数组
+        var newArr = arr1.concat(arr2);
+        document.write(newArr);
+        //join方法使用指定的字符分割数组中每个元素，
         document.write("<hr/>");
-        document.write(arr1.join("-"));
+        var newArr1 = arr1.join("*");
+        document.write(newArr1);
         document.write("<hr/>");
         //push方法向数组末尾添加元素，并返回新数组的长度
-        document.write(arr1.push(100));
+        var newLength = arr1.push(4);
+        var newLength = arr1.push(5);
+        document.write("newLength = " + newLength)
         document.write("<hr/>");
         document.write(arr1);
         var arr3 = [11,22,33];
         document.write("<hr/>");
-        //向数组添加一个数组时，把这个数组当作一个元素添加进去
+        //向数组添加一个数组时，把数组arr3当作一个元素添加进去
         document.write(arr2.push(arr3));
         document.write("<hr/>");
-        //pop方法删除并返回最后一个元素
+        document.write("arr2.length = " + arr2.length)
+        document.write("<hr/>");
+        //pop方法删除并返回最后一个元素,返回arr3
         document.write(arr2.pop());
         document.write("<hr/>");
         //reverse方法颠倒数组中元素的顺序

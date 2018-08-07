@@ -7,16 +7,19 @@
 <body>
     <script type="text/javascript">
         var n = 4;
+        //if语句的书写形式与Java类似
         if (n == 4) {
             document.write(4)
         }
         else document.write("other");
         document.write("<br/>");
+        //于Java类似
         while (n > 0) {
             document.write(n);
             document.write("<br/>");
             n--;
         }
+        //在JS中使用var来定义一切数据类型
         for (var i=0;i<=5;i++) {
             document.write(i);
             document.write("<br/>");
@@ -31,10 +34,13 @@
         }
         document.write("<br/>");
         var str = "111";
+        //字符串与数字使用“+” 运算符连接，就直接连接，于Java类似
         document.write(str + 1);
         document.write("<br/>");
-        document.write(str - 1);
+        //使用“-”运算符，就进行数组相减操作
+        document.write(str - 11);
         document.write("<br/>");
+        //"==="三个等号运算符，判断值与值类型
         if (str === 111) {
             document.write("true");
         }

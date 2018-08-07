@@ -5,18 +5,16 @@
     <title>乘法表的打印</title>
 </head>
 <body>
-    <script type="text/javascript">
-        document.write("<table border='1' cellspacing='0' bgcolor='#e9967a'>");
-        for (var i=1;i<=9;i++) {
-            document.write("<tr>");
-            for (var j=1;j<=i;j++) {
-                document.write("<td>");
-                document.write(j + "*" + i + "=" + i * j);
-                document.write("</td>");
-            }
-            document.write("</tr>");
-        }
-        document.write("</table>");
-    </script>
 </body>
+<script type="text/javascript">
+    document.write("<table border='1' cellspacing='0' bgcolor='#f0ffff' align='center'>");
+    for (var i = 1;i <= 9;i++) {
+        document.write("<tr>");
+        for (var j = 1;j <= i;j++) {
+            document.write("<td align='left'>" + j + "*" + i + "=" + j*i + "</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
 </html>

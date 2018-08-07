@@ -6,16 +6,18 @@
 </head>
 <body>
     <script type="text/javascript">
-        //定义数组方式一
-        var arr1 = ["1",2,true];
-        document.write(arr1);
+        //定义数组方式一,数组中的数据类型不限，
+        var n;
+        var arr1 = ["1",2,true,n];
+        document.write(arr1[0]);
         document.write("<br/>");
-        //定义数组方式二,使用内置的Array对象
+        //使用内置的Array对象
         var arr2 = new Array(3);
         arr2[0] = 1;
         arr2[1] = 2;
         arr2[2] = 3;
         document.write(arr2[0]);
+        //定义数组方式三，使用Array对象的同时，加入数据
         var arr3 = new Array(1,2,3);
         document.write(arr3);
         document.write("<br/>");
