@@ -22,12 +22,24 @@ public class Test4 {
             statement = connection.createStatement();
             //发送查询语句
             resultSet = statement.executeQuery("select * from exam.emp");
+            //移动到最后一行
+            resultSet.last();
+            //输出行数
+            System.out.println(resultSet.getRow());
+            //移动到第一行，不然无法打印数据
+            resultSet.first();
+            //得到列数
+            int columnCount = resultSet.getMetaData().getColumnCount();
             //遍历输出结果集
             while (resultSet.next()) {
-                int empno = resultSet.getInt("empno");
-                String ename = resultSet.getString("ename");
-                double sal = resultSet.getDouble("sal");
-                System.out.println(empno + "," + ename + "," + sal);
+                for (int i = 1; i <= columnCount; i++) {
+                    System.out.print(resultSet.getObject(i));
+                    if (i<columnCount) {
+                        System.out.print(", ");
+                    }
+                }
+                System.out.println();
+
             }
         } catch (Exception e) {
             throw new RuntimeException();
