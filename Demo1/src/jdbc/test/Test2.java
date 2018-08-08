@@ -22,10 +22,10 @@ public class Test2 {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1?useSSL=false", "root", "314159");
         System.out.println(connection);
-        //得到Statement对象
+        // 得到Statement对象
         Statement statement = connection.createStatement();
-        //使用Statement对象的executeUpdate方法发送sql语句，方法返回影响的行数
-        //String sql = "update stu set id='311509030103' where name='虾米'";
+        // 使用Statement对象的executeUpdate方法发送sql语句，方法返回影响的行数
+        // String sql = "update stu set id='311509030103' where name='虾米'";
         String sql = "delete from stu";
         int i = statement.executeUpdate(sql);
         System.out.println(i);

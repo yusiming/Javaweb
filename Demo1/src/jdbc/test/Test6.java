@@ -44,13 +44,13 @@ public class Test6 {
     private static boolean login2(String username, String password) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1?useSSL=false", "root", "314159");
-        //给出sql模板
+        // 给出sql模板
         String sql = "select * from user where username=? and password=?";
-        //得到PreparedStatement对象
+        // 得到PreparedStatement对象
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        //给第一个问号赋值
+        // 给第一个问号赋值
         preparedStatement.setString(1, username);
-        //给第二个问号赋值
+        // 给第二个问号赋值
         preparedStatement.setString(2, password);
         ResultSet resultSet = preparedStatement.executeQuery();
         return resultSet.next();

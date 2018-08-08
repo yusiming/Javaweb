@@ -18,9 +18,9 @@ public class Test1 {
          * username: root
          * password: 314159
          */
-        //加载驱动类.(注册驱动),所有的java.sql.Driver的实现类都提供了static代码块，把自己注册到DriverManager中
+        // 加载驱动类.(注册驱动),所有的java.sql.Driver的实现类都提供了static代码块，把自己注册到DriverManager中
         Class.forName("com.mysql.cj.jdbc.Driver");
-        //得到连接对象
+        // 得到连接对象
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1?useSSL=false", "root", "314159");
         System.out.println(connection);
     }
