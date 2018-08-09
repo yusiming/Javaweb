@@ -32,15 +32,13 @@ public class Demo1 {
             accountDao.updateBalance(connection, from, -money);
             //向to用户增加金额
             accountDao.updateBalance(connection, to, money);
-            //结束事务
+            //提交事务
             connection.commit();
             connection.close();
         } catch (Exception e) {
             try {
                 if (connection != null) {
                     connection.rollback();
-                }
-                if (connection != null) {
                     connection.close();
                 }
             } catch (SQLException e1) {
