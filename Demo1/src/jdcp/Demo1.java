@@ -29,9 +29,11 @@ public class Demo1 {
         dataSource.setMaxWait(1000);
 
         //得到连接对象
-        Connection connection = null;
+        Connection hhConnection = null;
         try {
-            connection = dataSource.getConnection();
+            Connection connection = dataSource.getConnection();
+            //进一步装饰
+            hhConnection = new MyConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -42,6 +44,6 @@ public class Demo1 {
         } catch (SQLException e) {
             e.printStackTrace();
         }*/
-        return connection;
+        return hhConnection;
     }
 }
