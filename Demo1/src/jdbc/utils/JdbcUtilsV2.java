@@ -26,6 +26,13 @@ public class JdbcUtilsV2 {
         return dataSource.getConnection();
     }
 
+    /**
+     * @Description: 返回一个连接池对象
+     * @auther: yusiming
+     * @date: 15:55 2018/8/9
+     * @param: []
+     * @return: javax.sql.DataSource
+     */
     public static DataSource getDataSource() {
         return dataSource;
     }
