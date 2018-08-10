@@ -1,9 +1,8 @@
 package jdbc.demo;
 
 import jdbc.test.AccountDao;
-import jdbc.utils.JdbcUtils;
+import jdbc.utils.JdbcUtilsV2;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -22,29 +21,20 @@ public class Demo1 {
      * @return: void
      */
     public void transferAccount(String from, String to, double money) {
-        Connection connection = null;
         try {
-            //得到Connection对象
-            connection = JdbcUtils.getConnection();
-            //开启事务
-            connection.setAutoCommit(false);
-            //从from用户减少金额
-            accountDao.updateBalance(connection, from, -money);
-            //向to用户增加金额
-            accountDao.updateBalance(connection, to, money);
-            //提交事务
-            connection.commit();
-            connection.close();
+            // 开启事务
+            JdbcUtilsV2.beginTransaction();
+            // 执行转账操作
+            accountDao.updateBalance(from,-money);
+            accountDao.updateBalance(to,money);
+            // 提交事务
+            JdbcUtilsV2.commitTransaction();
         } catch (Exception e) {
             try {
-                if (connection != null) {
-                    connection.rollback();
-                    connection.close();
-                }
+                JdbcUtilsV2.rollbackTransaction();
             } catch (SQLException e1) {
-                e1.printStackTrace();
+                throw new RuntimeException(e);
             }
-            throw new RuntimeException(e);
         }
     }
 }
