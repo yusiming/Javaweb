@@ -107,7 +107,12 @@ public class Demo1 {
      * @auther: yusiming
      * @date: 14:05 2018/8/10
      * @param: []
-     * @return: java.util.List<java.util.Map                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               java.lang.String                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               java.lang.Object>>
+     * @return: java.util.List<java.util.Map
+                       *       <
+                       *       <   p>
+     * java.lang.String
+     * ,
+     * java.lang.Object>>
      */
     public List<Map<String, Object>> selectMapListStudent() throws SQLException {
         QueryRunner queryRunner = new QueryRunner(JdbcUtilsV2.getDataSource());
