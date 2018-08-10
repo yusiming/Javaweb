@@ -8,5 +8,5 @@ import java.sql.ResultSet;
  * @Description:
  */
 public interface RsHandler<T> {
-    public T handle(ResultSet resultSet);
+    T handle(ResultSet resultSet);
 }

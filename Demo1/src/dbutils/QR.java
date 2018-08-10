@@ -3,6 +3,7 @@ package dbutils;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -25,8 +26,9 @@ public class QR<T> {
      * @return: int
      */
     public int update(String sql, Object... params) {
-        try (Connection connection = dataSource.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             // 调用本类的initParams方法，设置参数
             this.initParams(preparedStatement, params);
             // 返回影响的行数
@@ -36,8 +38,26 @@ public class QR<T> {
         }
     }
 
-    public T query(String sql, RsHandler rsHandler, Object params) {
-        return null;
+    /**
+     * @Description: 所有的查询数据库操作使用这个方法来完成，该方法返回一个bean对象，RsHandler由调用这个方法的提供
+     * @auther: yusiming
+     * @date: 11:40 2018/8/10
+     * @param: [sql, rsHandler, params]
+     * @return: T
+     */
+    public T query(String sql, RsHandler<T> rsHandler, Object params) {
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            // 设置参数
+            this.initParams(preparedStatement, params);
+            // 得到结果集
+            ResultSet resultSet = preparedStatement.executeQuery();
+            // 使用传递进来的rsHandler的handle方法返一个bean对象
+            return rsHandler.handle(resultSet);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
@@ -57,6 +77,5 @@ public class QR<T> {
                 throw new RuntimeException(e);
             }
         }
-
     }
 }
