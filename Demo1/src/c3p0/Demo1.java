@@ -20,30 +20,30 @@ public class Demo1 {
      * @return: java.sql.Connection
      */
     public Connection getConnection1() throws PropertyVetoException, SQLException {
-        //创建连接池对象
+        // 创建连接池对象
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
 
-        //配置四大参数
+        // 配置四大参数
         dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
         dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/mydb1?useSSL=false");
         dataSource.setUser("root");
         dataSource.setPassword("314159");
 
-        //配置池参数
+        // 配置池参数
         dataSource.setAcquireIncrement(5);
         dataSource.setInitialPoolSize(20);
         dataSource.setMinPoolSize(5);
         dataSource.setMaxPoolSize(50);
 
-        //得到Connection对象
+        // 得到Connection对象
         Connection connection = dataSource.getConnection();
-        //把连接归还给池
-        //connection.close();
+        // 把连接归还给池
+        // connection.close();
         return connection;
     }
 
     /**
-     * @Description: 使用默认配置
+     * @Description: 使用默认配置, 获取连接池
      * @auther: yusiming
      * @date: 15:36 2018/8/9
      * @param: []
@@ -55,7 +55,7 @@ public class Demo1 {
     }
 
     /**
-     * @Description: 使用指定配置
+     * @Description: 使用指定配置mysql-config,获取连接池
      * @auther: yusiming
      * @date: 15:37 2018/8/9
      * @param: []
