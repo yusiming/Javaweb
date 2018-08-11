@@ -69,13 +69,15 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void commitTransaction() throws SQLException {
-        // 判断事务是否已经开启,若未开启不能调用此方法
+        // 判断事务是否已经开启,若未开启不能调用此方法，防止空指针异常
         if (connection == null) {
             throw new SQLException("未开启事务，请开启事务再调用此方法");
         }
         connection.commit();
         connection.close();
-        // 表示事务已经结束
+        /* 表示事务已经结束,设置为null的原因是，若不设置为null，
+         * getConnection方法得到的connection只能是beginTransaction方法中设置的connection
+         */
         connection = null;
     }
 
@@ -87,7 +89,7 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void rollbackTransaction() throws SQLException {
-        // 判断事务是否已经开启，若未开启不能调用此方法
+        // 判断事务是否已经开启，若未开启不能调用此方法，防止空指针异常
         if (connection == null) {
             throw new SQLException("未开启事务，请开启事务再调用此方法");
         }
@@ -95,5 +97,23 @@ public class JdbcUtilsV2 {
         connection.close();
         // 表示事务已经结束
         connection = null;
+    }
+
+    /**
+     * @Description: 释放连接的方法，判断con是否是事务专用的connection，若不是则关闭此连接
+     * @auther: yusiming
+     * @date: 21:11 2018/8/11
+     * @param: [connection]
+     * @return: void
+     */
+    public static void releaseConnection(Connection con) throws SQLException {
+        // 若connection为空证明没有开启事务，直接关闭con
+        if (connection == null) {
+            con.close();
+        }
+        // 若某一dao在事务开启之前，已经调用getConnection方法得到了Connection对象，那么需要判断con是否与connection相等，
+        if (con != connection) {
+            con.close();
+        }
     }
 }
