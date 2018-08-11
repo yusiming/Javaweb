@@ -51,6 +51,10 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void beginTransaction() throws SQLException {
+        // 判断事务是否已经开启，若已经开启，抛出异常
+        if (connection != null) {
+            throw new SQLException("已经开启事务，勿重复开启");
+        }
         // 给事务专用connection对象赋值
         connection = getConnection();
         // 开启事务
@@ -65,8 +69,14 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void commitTransaction() throws SQLException {
+        // 判断事务是否已经开启,若未开启不能调用此方法
+        if (connection == null) {
+            throw new SQLException("未开启事务，请开启事务再调用此方法");
+        }
         connection.commit();
         connection.close();
+        // 表示事务已经结束
+        connection = null;
     }
 
     /**
@@ -77,7 +87,13 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void rollbackTransaction() throws SQLException {
+        // 判断事务是否已经开启，若未开启不能调用此方法
+        if (connection == null) {
+            throw new SQLException("未开启事务，请开启事务再调用此方法");
+        }
         connection.rollback();
         connection.close();
+        // 表示事务已经结束
+        connection = null;
     }
 }
