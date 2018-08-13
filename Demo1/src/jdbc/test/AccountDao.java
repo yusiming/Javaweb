@@ -24,6 +24,5 @@ public class AccountDao {
          * 那么就使用的是同一个connection对象，就可以完成事务
          */
         txQueryRunner.update(sql, number, name);
-        // 判断是否关闭连接
     }
 }

@@ -15,7 +15,7 @@ public class JdbcUtilsV2 {
     // 使用默认配置创建连接池对象
     private static ComboPooledDataSource dataSource = new ComboPooledDataSource();
     // 声明一个私有的Connection对象，事务专用
-    private static Connection connection = null;
+    private static ThreadLocal<Connection> threadLocal = new ThreadLocal<Connection>();
 
     /**
      * @Description: 使用连接池对象创建一个Connection对象
@@ -25,6 +25,8 @@ public class JdbcUtilsV2 {
      * @return: java.sql.Connection
      */
     public static Connection getConnection() throws SQLException {
+        // 在threadLocal中获取连接，
+        Connection connection = threadLocal.get();
         // 当开始事务时，connection已经被赋值，调用这个方法的dao会得到已经赋值的connection
         if (connection != null) {
             return connection;
@@ -51,6 +53,7 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void beginTransaction() throws SQLException {
+        Connection connection = threadLocal.get();
         // 判断事务是否已经开启，若已经开启，抛出异常
         if (connection != null) {
             throw new SQLException("已经开启事务，勿重复开启");
@@ -59,6 +62,8 @@ public class JdbcUtilsV2 {
         connection = getConnection();
         // 开启事务
         connection.setAutoCommit(false);
+        // 向threadLocal中设置事务专用连接
+        threadLocal.set(connection);
     }
 
     /**
@@ -69,6 +74,7 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void commitTransaction() throws SQLException {
+        Connection connection = threadLocal.get();
         // 判断事务是否已经开启,若未开启不能调用此方法，防止空指针异常
         if (connection == null) {
             throw new SQLException("未开启事务，请开启事务再调用此方法");
@@ -78,7 +84,7 @@ public class JdbcUtilsV2 {
         /* 表示事务已经结束,设置为null的原因是，若不设置为null，
          * getConnection方法得到的connection只能是beginTransaction方法中设置的connection
          */
-        connection = null;
+        threadLocal.remove();
     }
 
     /**
@@ -89,6 +95,7 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void rollbackTransaction() throws SQLException {
+        Connection connection = threadLocal.get();
         // 判断事务是否已经开启，若未开启不能调用此方法，防止空指针异常
         if (connection == null) {
             throw new SQLException("未开启事务，请开启事务再调用此方法");
@@ -96,7 +103,7 @@ public class JdbcUtilsV2 {
         connection.rollback();
         connection.close();
         // 表示事务已经结束
-        connection = null;
+        threadLocal.remove();
     }
 
     /**
@@ -107,6 +114,7 @@ public class JdbcUtilsV2 {
      * @return: void
      */
     public static void releaseConnection(Connection con) throws SQLException {
+        Connection connection = threadLocal.get();
         // 若connection为空证明没有开启事务，直接关闭con
         if (connection == null) {
             con.close();
