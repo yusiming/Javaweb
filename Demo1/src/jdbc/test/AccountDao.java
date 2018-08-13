@@ -1,9 +1,7 @@
 package jdbc.test;
 
-import jdbc.utils.JdbcUtilsV2;
-import org.apache.commons.dbutils.QueryRunner;
+import dbutils.TxQueryRunner;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -20,14 +18,12 @@ public class AccountDao {
      * @return: void
      */
     public void updateBalance(String name, double number) throws SQLException {
-        QueryRunner queryRunner = new QueryRunner();
+        TxQueryRunner txQueryRunner = new TxQueryRunner();
         String sql = "update account set balance=balance+? where name=?";
         /* 开启事务之后调用JdbcUtilsV2.getConnection()会得到beginTransaction方法赋值的connection对象，
          * 那么就使用的是同一个connection对象，就可以完成事务
          */
-        Connection connection = JdbcUtilsV2.getConnection();
-        queryRunner.update(connection, sql, number, name);
+        txQueryRunner.update(sql, number, name);
         // 判断是否关闭连接
-        JdbcUtilsV2.releaseConnection(connection);
     }
 }
