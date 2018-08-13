@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
+ * v2.0
+ *
  * @Auther: yusiming
  * @Date: 2018/8/9 15:45
  * @Description:

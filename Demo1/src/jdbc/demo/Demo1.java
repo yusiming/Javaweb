@@ -25,8 +25,8 @@ public class Demo1 {
             // 开启事务
             JdbcUtilsV2.beginTransaction();
             // 执行转账操作
-            accountDao.updateBalance(from,-money);
-            accountDao.updateBalance(to,money);
+            accountDao.updateBalance(from, -money);
+            accountDao.updateBalance(to, money);
             // 提交事务
             JdbcUtilsV2.commitTransaction();
         } catch (Exception e) {
