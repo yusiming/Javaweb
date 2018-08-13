@@ -15,7 +15,7 @@ public class JdbcUtilsV2 {
     // 使用默认配置创建连接池对象
     private static ComboPooledDataSource dataSource = new ComboPooledDataSource();
     // 声明一个私有的Connection对象，事务专用
-    private static ThreadLocal<Connection> threadLocal = new ThreadLocal<Connection>();
+    private static ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
 
     /**
      * @Description: 使用连接池对象创建一个Connection对象
