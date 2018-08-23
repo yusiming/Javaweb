@@ -22,7 +22,6 @@
     <servlet>
         <servlet-name>YSM2</servlet-name>
         <servlet-class>yu.servletTest.Bservlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>YSM2</servlet-name>
@@ -44,4 +43,12 @@
         <servlet-name>YSM4</servlet-name>
         <url-pattern>/yu/servlet/Byservlet</url-pattern>
     </servlet-mapping>
+    <context-param>
+        <param-name>context - name1</param-name>
+        <param-value>context - value1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>context - name2</param-name>
+        <param-value>context - value2</param-value>
+    </context-param>
 </web-app>
