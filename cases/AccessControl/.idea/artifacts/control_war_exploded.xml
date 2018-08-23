@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="control:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/control_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="control/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="control" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="D:/JAR/jakarta-taglibs-standard-1.1.2/lib/jstl.jar" />
+          <element id="file-copy" path="D:/JAR/jakarta-taglibs-standard-1.1.2/lib/standard.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
