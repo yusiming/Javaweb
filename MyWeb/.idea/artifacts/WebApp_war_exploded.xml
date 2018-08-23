@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WebApp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebApp_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WebApp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="D:/JAR/Commons/commons-io-1.4.jar" />
+          <element id="library" level="module" name="JUnit4" module-name="WebApp" />
+          <element id="file-copy" path="D:/JAR/jakarta-taglibs-standard-1.1.2/lib/jstl.jar" />
+          <element id="file-copy" path="D:/JAR/jakarta-taglibs-standard-1.1.2/lib/standard.jar" />
+          <element id="file-copy" path="D:/JAR/Commons/commons-fileupload-1.2.2.jar" />
+          <element id="file-copy" path="D:/JAR/JavaMail/activation.jar" />
+          <element id="file-copy" path="D:/JAR/JavaMail/mail.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="WebApp/web/Web" />
+    </root>
+  </artifact>
+</component>
