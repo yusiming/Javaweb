@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>confirm方法给出确认，返回一个boolean值</title>
+</head>
+<body>
+<input type="button" value="1" onclick="clear1();">
+<input type="button" value="2" onclick="clear2();">
+</body>
+<script type="text/javascript">
+    window.alert("yuyuyu");
+    var flag = window.confirm("是否删除？");
+    document.write(flag);
+    document.write("<hr/>");
+    var str = window.prompt("输入密码","123");
+    document.write(str);
+    window.open("../StringObject/Ex1.html","","width=500,height=500");
+    //关闭当前窗口
+    //window.close();
+    var id1 = window.setInterval("alert('aaa')",3000);
+    var id2 = window.setTimeout("alert('aaa')",3000);
+    function clear1() {
+        window.clearInterval(id1)
+    }
+    function clear2() {
+        window.clearInterval(id2)
+    }
+</script>
+</html>
